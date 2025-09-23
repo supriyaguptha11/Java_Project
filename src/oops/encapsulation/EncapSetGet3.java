@@ -1,4 +1,4 @@
-package oops;
+package oops.encapsulation;
 // name conflict between local variable and instance variable called shadowing
 class Learner
         {

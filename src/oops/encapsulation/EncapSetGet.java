@@ -1,7 +1,7 @@
 
 // Encapsulation , setters and getters for private
 
-package oops;
+package oops.encapsulation;
 class Employee
 {
     private int id;

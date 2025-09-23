@@ -1,6 +1,6 @@
-package oops;
+package oops.constructor;
 
-class pen {
+class pencil {
     String colour;
     int cost;
     String brand;
@@ -29,43 +29,43 @@ class pen {
         this.brand = brand;
     }
 
-    public pen(String colour, int cost, String brand) {
+        pencil(String colour, int cost, String brand) {
         this.colour = colour;
         this.cost = cost;
         this.brand = brand;
     }
-    pen()
+    pencil()
     {
-
+        colour = "red";
+        cost = 5000;
+        brand = "nemo";
     }
 
-    pen(String colour, int cost) {
+    pencil(String colour, int cost) {
         this.colour = colour;
         this.cost = cost;
     }
 
-    void printDetails() {
-        System.out.println(colour +" " + "cost is "+ cost);
-    }
-    void printAll() {
-        System.out.println(colour +" " + "cost is "+ cost + " "+ brand);
-    }
+//    void printDetails() {
+//        System.out.println(colour +" " + "cost is "+ cost);
+//    }
+//    void printAll() {
+//        System.out.println(colour +" " + "cost is "+ cost + " "+ brand);
+//    }
 }
 
-public class Example {
+public class Example2 {
 
     public static void main(String[] args) {
-        pen p1 = new pen("red",12);
-        pen p2 = new pen();
-        p2.setBrand("cello");
-        p2.setColour("black");
+        pencil p1 = new pencil("white",300,"breed");
+        System.out.println(p1.getColour());
+        System.out.println(p1.getCost());
+        System.out.println(p1.getBrand());
+        pencil p2 = new pencil();
         System.out.println(p2.getColour());
+        System.out.println(p2.getCost());
         System.out.println(p2.getBrand());
-        // p1.printDetails();
-        pen p3 = new pen("red",12, "techno tip");
-        p3.printAll();
-
-
     }
 
 }
+

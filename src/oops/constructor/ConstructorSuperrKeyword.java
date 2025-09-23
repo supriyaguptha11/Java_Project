@@ -5,7 +5,7 @@
 // super(); method only, no need to mentioned explicitly.       same for this() also
 // if you want to use this() for 2nd or 3rd constructors, (staying super() in 1st) then u have mention explicitly.
 
-package oops;
+package oops.constructor;
 class Demo {
     int num1, num2;
 
