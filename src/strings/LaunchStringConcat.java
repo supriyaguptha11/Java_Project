@@ -13,14 +13,14 @@ public class LaunchStringConcat {
 //        str1 = str1.concat(" Alien");
 //        System.out.println(str1);
 
-//        String str1 = "Telusko";
-//        System.out.println(str1);
-//        String str2 = str1.concat(" Java");
-//        System.out.println(str2);
+        String str1 = "Telusko";
+        System.out.println(str1);
+        String str2 = str1.concat(" Java");
+        System.out.println(str2);
 
 //          String str1 = "Telusko";
 //          System.out.println(str1);
-//          String str2 = str1.concat(" Alien");
+//          String str2 = str1.concat(" Alien");  // different string object is created
 //          String str3 = str1 + str2;
 ////          System.out.println(str2);
 ////          System.out.println(str3);
