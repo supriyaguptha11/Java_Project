@@ -1,14 +1,13 @@
-// multiple try and catch blocks
-package execeptionHandling;
+// single try block and multiple catch blocks
 
+package execeptionHandling;
 import java.util.Scanner;
 
-public class LaunchExceptionHandling2 {
-
+public class ExceptionHandling3_Single_try_multiple_catch {
     public static void main(String[] args) {
         System.out.println("Connection Established");
-        Scanner scan = new Scanner(System.in);
         try {
+            Scanner scan = new Scanner(System.in);
             System.out.println("Kindly enter the numerator for division");
             int n = scan.nextInt();
 
@@ -17,14 +16,6 @@ public class LaunchExceptionHandling2 {
 
             int res = n / d;
             System.out.println("Result is " + res);
-
-        }
-        catch(ArithmeticException e)
-        {
-            System.out.println("Please enter non zero number");
-        }
-        try
-        {
             System.out.println("Kindly enter size of an array");
             int size = scan.nextInt();
 
@@ -38,7 +29,10 @@ public class LaunchExceptionHandling2 {
 
             System.out.println("Data inserted in a array is " + ar[index]);
         }
-
+        catch(ArithmeticException e)
+        {
+            System.out.println("Please enter non zero number");
+        }
         catch(NegativeArraySizeException e)
         {
             System.out.println("Please enter only positive values");
