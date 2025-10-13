@@ -8,6 +8,7 @@ import java.util.Scanner;
 //throw is used to throw the exception manually
 // if throw keyword used lines below the throw keyword will not get executed, immediately control leaves the method
 // so u can use "finally{}" , if there is exception or not finally blocks gets executed
+// if exception has occurred and corresponding catch block is not matched , still finally blocks gets executed goes to Default exception handler
 
 
 class Alpha2 {
@@ -30,6 +31,7 @@ class Alpha2 {
 
            // System.out.println("Alpha2 connection terminated");
         }
+        //catch(NullPointerException e)
         catch(ArithmeticException e)
         {
             System.out.println("Handled in alpha");
@@ -49,6 +51,7 @@ public class ExceptionHandlingthrow {
             Alpha2 a = new Alpha2();
             a.calc();
         }
+        //catch(NullPointerException e)
         catch(ArithmeticException e)
         {
             System.out.println("exception caught at main method ");
