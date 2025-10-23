@@ -37,6 +37,14 @@ class LaunchGenericsExample {
             System.out.println(e);
         }
 
+        // ArrayList<int> e = new ArrayList<>();  // primitive is not allowed
+
+     //   ArrayList<Object> e = new ArrayList<Integer>(); // not allowed parent type and child is also not allowed
+
+        ArrayList<Integer> e = new ArrayList<>(); // can use any wrapper class
+
+
+
 
     }
 }
