@@ -30,6 +30,7 @@ public class LaunchArrayList {
 //        al2.remove(0);
 //        System.out.println(al2);
         al2.add(10);
+    //    al2.add(null); // null is allowed
         System.out.println(al2);
 
 

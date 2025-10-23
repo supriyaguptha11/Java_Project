@@ -23,6 +23,7 @@ public class LaunchPriorityQueue {
         pq.add(175);
         System.out.println(pq);
         pq.add(125);
+    //    pq.add(null); // null is not allowed we get NullPointerException
         System.out.println(pq);
 
 

@@ -20,6 +20,7 @@ public class LaunchHashSet {
         hs.add(175);
         System.out.println(hs);
         hs.add(50);
+        //hs.add(null); // null is allowed
         System.out.println(hs);
 
 

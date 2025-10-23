@@ -35,6 +35,7 @@ public class LaunchLinkedList {
         System.out.println(ll1);
 
         ll1.add("Java");
+     //   ll1.add(null); // null value is allowed
         System.out.println(ll1);
 
     }

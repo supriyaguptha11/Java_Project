@@ -15,6 +15,7 @@ public class LaunchLinkedHashSet {
         lhs.add(75);
         lhs.add(125);
         lhs.add(175);
+     //   lhs.add(null); // null is allowed
         System.out.println(lhs); // [100, 50, 150, 25, 75, 125, 175]
 
     }

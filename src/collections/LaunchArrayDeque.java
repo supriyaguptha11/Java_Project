@@ -20,6 +20,7 @@ public class LaunchArrayDeque {
         System.out.println(ad);
 
         ad.add(40);
+     //   ad.add(null); // null is not allowed we get NullPointerException
         System.out.println(ad);
 
 

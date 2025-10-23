@@ -18,6 +18,7 @@ public class LaunchTreeSet {
         ts.add(75);
         ts.add(125);
         ts.add(175);
+     //   ts.add(null); // null is not allowed we get NullPointerException
 
         System.out.println(ts);
 
