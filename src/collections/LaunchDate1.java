@@ -1,5 +1,8 @@
 package collections;
 // to manage Date , we have date class available
+// time package - present inside util package and sql package
+// util package - for regular operations
+// SQL package  - jdbc operations
 
 //import java.util.Date;
 
