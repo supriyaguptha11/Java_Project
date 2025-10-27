@@ -17,8 +17,8 @@ package lamda;
 //}
 public class LamdaExperession {
     public static void main(String[] args) {
-//        P obj = new R(); //  general way of creating object
-//        P obj1 = new P() {
+//        P obj = new P(); //  general way of creating object
+//        P obj1 = new R() {
 //            public void show() {
 //                System.out.println("B in show");
 //            }
