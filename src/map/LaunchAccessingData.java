@@ -53,7 +53,7 @@ public class LaunchAccessingData {
 
         System.out.println("*************");
 
-        Set entry=hm1.entrySet();
+        Set entry=hm1.entrySet();// You get a Set of all entries — i.e., all key–value pairs. - entry
        Iterator itr3= entry.iterator();
        while(itr3.hasNext())
        {
