@@ -8,24 +8,30 @@ package enumAnnotation;
 // are meta-annotations in Java. That means they are annotations that are used to define the behavior of another annotation.
 
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
+
 @Retention(RetentionPolicy.RUNTIME) // Keep annotation info at runtime. // Specifies how long the annotation information is retained.
-@Target(ElementType.TYPE) // Specifies where this annotation can be applied(type,method,field, parameter etc)
+//@Target(ElementType.TYPE) // Specifies where this annotation can be applied(type,method,field, parameter etc)
+    // we can specify multiple targets
+    @Target({ElementType.TYPE, ElementType.CONSTRUCTOR,ElementType.LOCAL_VARIABLE,ElementType.FIELD,ElementType.METHOD})
+// we can apply Cricket annotation to type, constructor, local variable, field, method
+
 @interface CricketPlayer
 {
-    String country();
-    int age();
+   // String country();
+     String country() default "India"; // if you set to default here then even if you can't specify in annotation also is not a problem
+   // int age();
+    int age() default 35;
 
 }
 //@CricketPlayer
-@CricketPlayer(country = "India", age = 35)  // created variables in interface 
+//@CricketPlayer(country = "India", age = 35)  // created variables in interface
+@CricketPlayer
 class ViratKohli
 {
+    @CricketPlayer
     private int innings;
-
+    @CricketPlayer
     public ViratKohli() {
 
     }
@@ -46,6 +52,15 @@ public class LaunchCreateAnnotation {
         ViratKohli vk = new ViratKohli();
         vk.setInnings(344);
         System.out.println(vk.getInnings());
+
+        System.out.println("******************");
+
+        Class<? extends ViratKohli> c = vk.getClass();
+        Annotation an = c.getAnnotation(CricketPlayer.class); //  information about this annotation
+        CricketPlayer cp = (CricketPlayer) an;
+        int age = cp.age();
+        String country = cp.country();
+        System.out.println("Information of attributes of annotations are " +age+ " " + country);
 
     }
 }
