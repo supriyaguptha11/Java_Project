@@ -1,18 +1,9 @@
 package multithreading;
-/*
-1.creating a thread - 1. by extending predefine class called thread 2. by implementing a runnable interface
-2.Apart from main thread , whatever thread we create we need to define a task to that thread, it is there inside a method called run method
-// Thread Scheduler is the boss of Thread.
-3.we have to register our thread with JVM, Thread Scheduler if you don't register then no thread is created even through you created
- after creating a thread we need to hand over that thread to Thread scheduler by calling a method called start(); which means giving life to a thread
-4.Which thread will execute first will be not in our control it is handled by thread scheduler
-5.The thread scheduler checks each thread if it takes time then another thread will execute like this way all the threads will execute concurrently.
-
- */
+// Implementing runnable Interface
 
 import java.util.Scanner;
 
-class Alpha1 extends Thread
+class Alpha2 implements Runnable
 {
     @Override
     public void run ()
@@ -33,7 +24,8 @@ class Alpha1 extends Thread
     }
 }
 
-class Beta1 extends Thread{
+class Beta2 implements Runnable
+{
     @Override
     public void run ()
     {
@@ -53,7 +45,8 @@ class Beta1 extends Thread{
     }
 }
 
-class Gamma1 extends Thread{
+class Gamma2 implements Runnable
+{
     @Override
     public void run ()
     {
@@ -72,26 +65,49 @@ class Gamma1 extends Thread{
         System.out.println("Important message terminated");
 
 
-        System.out.println("Application terminated................");
+
     }
 }
 
 
 
-public class LaunchCreateThread {
+public class LaunchCreateThread2 {
     public static void main(String[] args) throws InterruptedException {
-        Alpha1 a = new Alpha1();
-        Beta1 b = new Beta1();
-        Gamma1 g = new Gamma1();
+        Alpha2 a = new Alpha2();
+        Beta2 b = new Beta2();
+        Gamma2 g = new Gamma2();
 
-        // handover this thread to thread scheduler by calling start();
-        a.start();
-        b.start();
-        g.start();
+        // creating a thread instance
+        // inside a of ALpha2 run method is present, so we are giving ref a to a thread likewise all
+        Thread thread1 = new Thread(a);
+        Thread thread2 = new Thread(b);
+        Thread thread3 = new Thread(g);
 
-//        a.banking();
-//        b.PrintingStars();
-//        g.focus();
+        // before start method there is no life for thread , we can check that by using isAlive();
+
+//        System.out.println(thread1.isAlive()); // false bcz there is no life for thread
+//        System.out.println(thread2.isAlive());// false
+//        System.out.println(thread3.isAlive());// false
+
+        thread1.start();
+        thread2.start();
+        thread3.start();
+// join(); method is a way of controlling threads
+        thread1.join();//The join() method blocks the calling thread (main thread here) until the target thread finishes execution.
+        thread2.join();
+        thread3.join();
+
+//        System.out.println(thread1.isAlive()); // true  bcz start method has life
+//        System.out.println(thread2.isAlive()); // true
+//        System.out.println(thread3.isAlive()); // true
+
+
+        System.out.println("Application terminated................");
+
+
+
+
 
     }
 }
+
